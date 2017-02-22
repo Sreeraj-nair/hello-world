@@ -1,2 +1,2 @@
-# Read me file for hello-world project
+# Selenium WebDriver Learnings and important concepts
 This is hello world project
