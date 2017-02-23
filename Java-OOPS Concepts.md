@@ -57,3 +57,6 @@ The same class can be written as -
     
     }
 
+You cannot develop a mobile phone that has a front light but you don't know how it works. If you really want a new mobile phone you will have to define the way the front light works. 
+
+If you want to use the methods defined in abstract class, it is required to create a new class that extends the abstract class. If you fail to defing frontLight() in this new class, this class will also become abstract class. If you define the frontLight(), the new class becomes concreate class. 
