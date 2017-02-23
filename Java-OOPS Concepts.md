@@ -32,7 +32,7 @@ In this case you will declare a method (for frontLight()) rather than defining i
 
     }
 
-## A class that has atleast one abstract method is known as abtract class and you cannot create an object for the abstract class. 
+## A class that has atleast one abstract method is known as an abstract class and you cannot create an object for the abstract class. 
 
 The same class can be written as - 
 
