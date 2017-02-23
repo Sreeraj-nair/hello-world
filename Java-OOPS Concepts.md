@@ -16,6 +16,10 @@ If a class includes abstract methods, then the class itself must be declared abs
               abstract void userLogin();
        }
 
+When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not, then the subclass must also be declared abstract. 
+
+##Note: Methods in an interface (see the Interfaces section) that are not declared as default or static are implicitly abstract, so the abstract modifier is not used with interface methods. (It can be used, but it is unnecessary.)
+
 Refer to http://docs.oracle.com/javase/tutorial/java/IandI/abstract.html 
 
        
