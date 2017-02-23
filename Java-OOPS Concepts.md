@@ -2,7 +2,7 @@
 
 ## 1. What is an abstract class? 
 - If you have an idea in your mind that can be called class. 
-- If you have some reality objects it is called object. 
+- If you have some idea that is a real object it is called object. 
 
 To create an object you require a class and to define what object should do we need to define methods in class. 
 
