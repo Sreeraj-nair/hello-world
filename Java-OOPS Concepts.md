@@ -10,49 +10,49 @@ Eg. You are assigned a task of designing a new mobile phone with flash light on 
 should work. 
 In this case you will declare a method (for frontLight()) rather than defining it (since you don't know what it should do). 
 
-class MobilePhone(){
+    class MobilePhone(){
 
 
-    public void camera(){
+        public void camera(){
 
-    //define the method
+        //define the method
   
+        }
+  
+        public void backLight(){
+  
+        // you know what back light does 
+        // so define it
+  
+        }
+  
+        //you don't know what front light will do, but you know you want front light so declare it
+
+        abstract void frontLight(); 
+
     }
-  
-    public void backLight(){
-  
-    // you know what back light does 
-    // so define it
-  
-    }
-  
-    //you don't know what front light will do, but you know you want front light so declare it
-
-    abstract void frontLight(); 
-
- }
 
 A class that has atleast one abstract method is known as abtract class and you cannot create an object for the abstract class. The same 
 class can be written as - 
 
-abstract class MobilePhone(){
+    abstract class MobilePhone(){
   
-    public void camera(){
+        public void camera(){
     
-    //define the method
+        //define the method
     
-    }
+        }
   
-    public void backLight(){
+        public void backLight(){
     
-    // you know what back light does 
+        // you know what back light does 
     
-    // so define it
+        // so define it
     
-    }
+        }
   
-    //you don't know what front light will do, but you know you want front light so declare it
-    abstract void frontLight(); 
+        //you don't know what front light will do, but you know you want front light so declare it
+        abstract void frontLight(); 
     
     }
 
