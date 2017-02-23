@@ -6,11 +6,11 @@
 
 To create an object you require a class and to define what object should do we need to define methods in class. 
 
-Eg. You are assigned a task of designing a new mobile phone with flash light on the front but you don't know how the front flash light should work. 
+Eg. You are assigned a task of designing a new mobile phone with flash light on the front but you don't know how the front flash light 
+should work. 
 In this case you will declare a method (for frontLight()) rather than defining it (since you don't know what it should do). 
 
 class MobilePhone(){
-  
   public void camera(){
   //define the method
   }
@@ -24,7 +24,8 @@ class MobilePhone(){
   abstract void frontLight(); 
 }
 
-A class that has atleast one abstract method is known as abtract class and you cannot create an object for the abstract class. The same class can be written as - 
+A class that has atleast one abstract method is known as abtract class and you cannot create an object for the abstract class. The same 
+class can be written as - 
 
 abstract class MobilePhone(){
   
