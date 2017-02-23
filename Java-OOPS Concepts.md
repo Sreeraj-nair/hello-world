@@ -62,3 +62,17 @@ You cannot develop a mobile phone that has a front light but you don't know how 
 If you want to use the methods defined in abstract class, it is required to create a new class that extends the abstract class. If you fail to defing frontLight() in this new class, this class will also become abstract class. If you define the frontLight(), the new class becomes concreate class. 
 
 ## You can create objects only for a concreate class. 
+
+##2. What are abstract methods? 
+
+Eg. Concrete method with definintion - 
+
+       public void login(){
+       //code to perform user authentication
+       }
+       
+Eg. Abstract method. Any method that is declared and not defined is known as an abstract method. 
+
+       public abstract void login(); //this is absctract
+       
+       
