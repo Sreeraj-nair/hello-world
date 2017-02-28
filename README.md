@@ -94,7 +94,7 @@ TestNG allows you to specify dependencies either with annotations or in XML.
 We can use the attributes dependsOnMethods or dependsOnGroups, found on @Test annotation. 
 
 There are two types of dependencies - 
-  ###1. Hard Dependencies - All the methods you depend on must have run and succeeded. Atleast one failure will SKIP the tests. 
+### 1. Hard Dependencies - All the methods you depend on must have run and succeeded. Atleast one failure will SKIP the tests. 
    
          @Test
          public void launchAUT() {}
@@ -118,9 +118,7 @@ There are two types of dependencies -
       Here, verifyLogin() is delacared as depending on any groups matching the regular expression "init.*", which guarantees that the 
       methods serverStartedOK() and initEnvironment() will always be invoked before verifyLogin(). 
       
-
-
-   ###2. Soft Dependencies - Always be run after the methods you depend on, even if some of them have failed. Can be acheived by adding 
+  ### 2. Soft Dependencies - Always be run after the methods you depend on, even if some of them have failed. Can be acheived by adding 
    "alwaysRun=true" in your @Test annotation. 
 
 
