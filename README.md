@@ -128,7 +128,17 @@ The org.testng.IReporter interface only has one method:
 
 This method will be invoked by TestNG when all the suites have been run and you can inspect its parameters to access all the information on the run that was just completed.
 
+### Important Listeners in TestNG
 
+## 1. ITestListener
+
+org.testng
+# Interface ITestNGListener
+
+public interface ITestNGListener
+   This is a marker interface for all objects that can be passed as a -listener argument.
+   
+   
 
 
 
