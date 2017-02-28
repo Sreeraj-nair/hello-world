@@ -157,6 +157,36 @@ void onStart(ITestContext context)
    
 void onFinish(ITestContext context)
    
+## What are Factories in TestNG? 
+Factory allows you to create tests dynamically. For eg. when you want to create a test method that will access a page on a web site several times, and you want to invoke it with different values. 
+   
+   public class TestAUT {
+         @Test(parameters = { "number-of-times" })
+         public void accessPage(int numberOfTimes) {
+            while (numberOfTimes-- > 0) {
+            // access the web page
+            }
+         }
+   }
+   
+TestNG.xml file would look like - 
+   
+   <test name="T1">
+      <parameter name="number-of-times" value="10"/>
+      <class name= "TestAUT" />
+   </test>
+ 
+   <test name="T2">
+      <parameter name="number-of-times" value="20"/>
+      <class name= "TestAUT"/>
+   </test>
+ 
+   <test name="T3">
+      <parameter name="number-of-times" value="30"/>
+      <class name= "TestAUT"/>
+   </test>
 
+
+   
 
 
