@@ -171,20 +171,20 @@ Factory allows you to create tests dynamically. For eg. when you want to create 
    
 TestNG.xml file would look like - 
    
-   <test name="T1">
-      <parameter name="number-of-times" value="10"/>
-      <class name= "TestAUT" />
-   </test>
+      <test name="T1">
+         <parameter name="number-of-times" value="10"/>
+            <class name= "TestAUT" />
+         </test>
  
-   <test name="T2">
-      <parameter name="number-of-times" value="20"/>
-      <class name= "TestAUT"/>
-   </test>
+      <test name="T2">
+         <parameter name="number-of-times" value="20"/>
+            <class name= "TestAUT"/>
+      </test>
  
-   <test name="T3">
-      <parameter name="number-of-times" value="30"/>
-      <class name= "TestAUT"/>
-   </test>
+      <test name="T3">
+         <parameter name="number-of-times" value="30"/>
+            <class name= "TestAUT"/>
+      </test>
 
 
    
