@@ -1,4 +1,5 @@
 # Selenium WebDriver Learnings and important concepts
+
 ## Selenium is a tool for automating browsers. 
 
 Test automation has specific advantages for improving the long-term efficiency of a software team’s testing processes. Test automation supports:
@@ -89,7 +90,7 @@ Use dependency when tests needs to be executed in a certain order. Eg -
 
 TestNG allows you to specify dependencies either with annotations or in XML.
 
-### Dependencies with annotations - 
+## Dependencies with annotations - 
 
 We can use the attributes dependsOnMethods or dependsOnGroups, found on @Test annotation. 
 
@@ -128,16 +129,33 @@ The org.testng.IReporter interface only has one method:
 
 This method will be invoked by TestNG when all the suites have been run and you can inspect its parameters to access all the information on the run that was just completed.
 
-### Important Listeners in TestNG
+## Important Listeners in TestNG
 
-## 1. ITestListener
+## 1. ITestNGListener
 
 org.testng
-# Interface ITestNGListener
+### Interface ITestNGListener
 
 public interface ITestNGListener
-   This is a marker interface for all objects that can be passed as a -listener argument.
+   This is a marker interface for all objects that can be passed as a listener argument.
+
+## 2. ITestListener 
+public interface ITestListener extends ITestNGListener
+
+Method details 
+void onTestStart(ITestResult result)
+
+void onTestSuccess(ITestResult result)
+
+void onTestFailure(ITestResult result)
+
+void onTestSkipped(ITestResult result)
+
+void onTestFailedButWithinSuccessPercentage(ITestResult result)
+
+void onStart(ITestContext context)
    
+void onFinish(ITestContext context)
    
 
 
