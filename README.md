@@ -186,6 +186,41 @@ TestNG.xml file would look like -
             <class name= "TestAUT"/>
       </test>
 
+With the above approach, it will become difficult to manage, so instead we should use a Factory. 
+
+      public class WebAUTFactory {
+         @Factory
+         public Object[] createInstances() {
+            Object[] result = new Object[10]; 
+               for (int i = 0; i < 10; i++) {
+                     result[i] = new WebAUTt(i * 10);
+               }
+         return result;
+         }
+      }
+      
+And the new test class would look like - 
+ 
+         public class WebAUT {
+               private int m_numberOfTimes;
+               public WebTest(int numberOfTimes) {
+                  m_numberOfTimes = numberOfTimes;
+               }
+ 
+               @Test
+               public void testServer() {
+                  for (int i = 0; i < m_numberOfTimes; i++) {
+                  // access the web page
+                  }
+               }
+         }
+
+Your testng.xml only needs to reference the class that contains the factory method, since the test instances themselves will be created at runtime:
+      <class name="WebAUTFactory" />
+
+
+
+
 
    
 
