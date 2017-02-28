@@ -96,24 +96,24 @@ We can use the attributes dependsOnMethods or dependsOnGroups, found on @Test an
 There are two types of dependencies - 
    1. Hard Dependencies - All the methods you depend on must have run and succeeded. Atleast one failure will SKIP the tests. 
    
-      @Test
-      public void launchAUT() {}
+         @Test
+         public void launchAUT() {}
  
-      @Test(dependsOnMethods = { "launchAUT" })
-      public void verifyLogin() {}
+         @Test(dependsOnMethods = { "launchAUT" })
+         public void verifyLogin() {}
 
    Here, verifyLogin is declared as depending on method launchAUT(), which guarantees that launchAUT() will always be invoked. 
    
    You can also have methods that depend on entire groups. 
    
-      @Test(groups = { "init" })
-      public void serverStartedOk() {}
+         @Test(groups = { "init" })
+         public void serverStartedOk() {}
  
-      @Test(groups = { "init" })
-      public void setUpEnvironment() {}
+         @Test(groups = { "init" })
+         public void setUpEnvironment() {}
  
-      @Test(dependsOnGroups = { "init.*" })
-      public void verifyLogin() {}
+         @Test(dependsOnGroups = { "init.*" })
+         public void verifyLogin() {}
       
       Here, verifyLogin() is delacared as depending on any groups matching the regular expression "init.*", which guarantees that the 
       methods serverStartedOK() and initEnvironment() will always be invoked before verifyLogin(). 
