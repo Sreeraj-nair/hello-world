@@ -81,5 +81,49 @@ Test methods are annotated with @Test. Methods annotated with @Test that happen 
          
 ### Test Methods - 
 
+## Dependencies in Test Methods
+
+Use dependency when tests needs to be executed in a certain order. Eg - 
+   - To make sure that a certain test method has completed and succeeded before running more test methods. 
+   - To initialize your tests while wanting this initialization methods to be test methods as well (methods tagged with @Before/After      will not be part of the final report).
+
+TestNG allows you to specify dependencies either with annotations or in XML.
+
+### Dependencies with annotations - 
+
+We can use the attributes dependsOnMethods or dependsOnGroups, found on @Test annotation. 
+
+There are two types of dependencies - 
+   1. Hard Dependencies - All the methods you depend on must have run and succeeded. Atleast one failure will SKIP the tests. 
+   
+      @Test
+      public void launchAUT() {}
+ 
+      @Test(dependsOnMethods = { "launchAUT" })
+      public void verifyLogin() {}
+
+   Here, verifyLogin is declared as depending on method launchAUT(), which guarantees that launchAUT() will always be invoked. 
+   
+   You can also have methods that depend on entire groups. 
+   
+      @Test(groups = { "init" })
+      public void serverStartedOk() {}
+ 
+      @Test(groups = { "init" })
+      public void setUpEnvironment() {}
+ 
+      @Test(dependsOnGroups = { "init.*" })
+      public void verifyLogin() {}
+      
+      Here, verifyLogin() is delacared as depending on any groups matching the regular expression "init.*", which guarantees that the 
+      methods serverStartedOK() and initEnvironment() will always be invoked before verifyLogin(). 
+      
+
+
+   2. Soft Dependencies - Always be run after the methods you depend on, even if some of them have failed. Can be acheived by adding 
+   "alwaysRun=true" in your @Test annotation. 
+
+
+
 
 
