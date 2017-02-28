@@ -118,8 +118,8 @@ You can also have methods that depend on entire groups.
 Here, verifyLogin() is delacared as depending on any groups matching the regular expression "init.*", which guarantees that the 
 methods serverStartedOK() and initEnvironment() will always be invoked before verifyLogin(). 
       
- ### 2. Soft Dependencies - Always be run after the methods you depend on, even if some of them have failed. Can be acheived by adding 
- "alwaysRun=true" in your @Test annotation. 
+### 2. Soft Dependencies - Always be run after the methods you depend on, even if some of them have failed. Can be acheived by adding 
+"alwaysRun=true" in your @Test annotation. 
 
 
 
