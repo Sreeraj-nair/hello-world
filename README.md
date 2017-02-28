@@ -121,6 +121,13 @@ methods serverStartedOK() and initEnvironment() will always be invoked before ve
 ### 2. Soft Dependencies - Always be run after the methods you depend on, even if some of them have failed. Can be acheived by adding 
 "alwaysRun=true" in your @Test annotation. 
 
+## Logging Reporters in TestNG 
+The org.testng.IReporter interface only has one method:
+
+      public void generateReport(List<ISuite> suites, String outputDirectory)
+
+This method will be invoked by TestNG when all the suites have been run and you can inspect its parameters to access all the information on the run that was just completed.
+
 
 
 
