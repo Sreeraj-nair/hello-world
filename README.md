@@ -68,6 +68,15 @@ A typical session on the command prompt would look like -
          
          java -classpath testng.jar;%CLASSPATH% org.testng.TestNG -d test-outputs test-outputs\testng-failed.xml
          
+## Test methods, Test classes and Test Groups
+Test methods are annotated with @Test. Methods annotated with @Test that happen to return a value will be ignored, unless you set allow-return-values to true in your testng.xml:
+      
+      <suite allow-return-values="true">
+      or
+      <test allow-return-values="true">
+
+
+         
 
 
 
