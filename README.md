@@ -102,9 +102,9 @@ There are two types of dependencies -
          @Test(dependsOnMethods = { "launchAUT" })
          public void verifyLogin() {}
 
-   Here, verifyLogin is declared as depending on method launchAUT(), which guarantees that launchAUT() will always be invoked. 
+Here, verifyLogin is declared as depending on method launchAUT(), which guarantees that launchAUT() will always be invoked. 
    
-   You can also have methods that depend on entire groups. 
+You can also have methods that depend on entire groups. 
    
          @Test(groups = { "init" })
          public void serverStartedOk() {}
@@ -115,11 +115,11 @@ There are two types of dependencies -
          @Test(dependsOnGroups = { "init.*" })
          public void verifyLogin() {}
       
-      Here, verifyLogin() is delacared as depending on any groups matching the regular expression "init.*", which guarantees that the 
-      methods serverStartedOK() and initEnvironment() will always be invoked before verifyLogin(). 
+Here, verifyLogin() is delacared as depending on any groups matching the regular expression "init.*", which guarantees that the 
+methods serverStartedOK() and initEnvironment() will always be invoked before verifyLogin(). 
       
-  ### 2. Soft Dependencies - Always be run after the methods you depend on, even if some of them have failed. Can be acheived by adding 
-   "alwaysRun=true" in your @Test annotation. 
+ ### 2. Soft Dependencies - Always be run after the methods you depend on, even if some of them have failed. Can be acheived by adding 
+ "alwaysRun=true" in your @Test annotation. 
 
 
 
