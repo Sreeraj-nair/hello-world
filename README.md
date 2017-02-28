@@ -30,3 +30,15 @@ Test automation has specific advantages for improving the long-term efficiency o
    
    7. TestNG supports parallel test execution.
 
+## Parallel Test Execution in TestNG 
+
+The below testng.xml will execute the methods in parallel. The parameter thread-count=2 specifies the number of threads that will be executed. 
+
+      <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+      <suite name="ParalletTestSuite" parallel="methods" thread-count="2">
+         <test name="SmokeTests">
+            <classes>
+               <class name="com.tests.TestClassName"/>
+            </classes>
+       </test>
+      </suite>
