@@ -42,3 +42,21 @@ The below testng.xml will execute the methods in parallel. The parameter thread-
             </classes>
        </test>
       </suite>
+
+The parallel attribute on the <suite> tag can take one of the following values: 
+
+      1. <suite name="My suite" parallel="methods" thread-count="5">
+      2. <suite name="My suite" parallel="tests" thread-count="5">
+      3. <suite name="My suite" parallel="classes" thread-count="5">
+      4. <suite name="My suite" parallel="instances" thread-count="5">
+      
+ If you want to invoke a test method from different threads. It can be done as - 
+   
+      @Test(threadPoolSize=3, invocationCount=10, timeOut=1000)
+      public void testLogin(){
+      }
+
+Here the method testLogin() will be invoked 10 times from three different threads. Additionally, a time-out of test seconds guarantees that none of the threads will block on this thread forever. 
+
+
+
