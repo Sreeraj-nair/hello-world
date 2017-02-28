@@ -58,5 +58,16 @@ The parallel attribute on the <suite> tag can take one of the following values:
 
 Here the method testLogin() will be invoked 10 times from three different threads. Additionally, a time-out of test seconds guarantees that none of the threads will block on this thread forever. 
 
+## Re-running failed tests using Selenium WebDriver 
+
+Every time tests fail in a suite, TestNG creates a file called testng-failed.xml in the output directory. This XML file contains the necessary information to rerun only those methods that failed, allowing you to quickly reproduce the failures having to run the entirety of your tests. 
+
+A typical session on the command prompt would look like -
+
+         java -classpath testng.jar;%CLASSPATH% org.testng.TestNG -d test-outputs testng.xml
+         
+         java -classpath testng.jar;%CLASSPATH% org.testng.TestNG -d test-outputs test-outputs\testng-failed.xml
+
+
 
 
