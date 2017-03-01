@@ -44,9 +44,17 @@ Primarily, it can be divided into 3 parts -
 ### What are different automation frameworks that can be created using Selenium WebDriver? 
 1. Data Driven Test Automation Framework 
 
-2. Keyword Driven Test Automation Framework
+2. Keyword or Table Driven Test Automation Framework
+Most commonly used testing framework. Keyword is an action that can be performed on a GUI component. Eg. of an action is InputText, ClickButton, ClickCheckBox, ClickRadioButton, SelectValueFromDropdown and so on. 
 
-3. Hybrid Test Automation Framework
+ApplicationMap - textFieldUsername
+ActionKeyword  - Set
+Argument       - ROBOT
+
+3. Hybrid Test Automation Framework 
+It is the combination of one or more frameworks discussed above. 
+
+4. Page Object Model Framework 
 
 
 ### What are some of the important classes and interfaces of WebDriver? 
