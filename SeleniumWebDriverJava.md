@@ -40,7 +40,27 @@ Primarily, it can be divided into 3 parts -
 3. Selenium WebDriver API. 
 
 ### What is the difference between Selenium and HP QTP? 
-
+          
+          ### Selenium                                          ### HP QTP/UFT 
+ 1. Open source and doesn't require license fee.            1. Commercial tool and requires license fee.
+ 
+ 2. Suitable for only web or browser based applications.    2. Suitable for both client-server and web applications. 
+ 
+ 3. Wide range of IDEs Eclipse, VisualStudio, Netbeans.     3. Only QTP IDE. 
+ 
+ 4. Supports Java, C#, Ruby, Python, PHP, Javascript.       4. Supports VB Scripting. 
+ 
+ 5. No built in object repository. Can be managed via       5. Built in object repository and easy to maintain. 
+ UI element  user extension.
+ 
+ 6. No such integration available.                          6.  Integration with test management tool like HP ALM.
+ 
+ 7. Scripts need to be updated with the API version change. 7. Scripts are backward compatible.                        7.  
+ 
+ 8. Easy and fast.                                          8. Takes time for creating scripts and maintaining it. 
+ 
+ 9. Supports additional pluggins that are not in Selenium.  9. Supports SAP, Oracle and .Net with add-on license cost incurred. 
+ 
 ### What are different automation frameworks that can be created using Selenium WebDriver? 
 
 ### What are some of the important classes and interfaces of WebDriver? 
