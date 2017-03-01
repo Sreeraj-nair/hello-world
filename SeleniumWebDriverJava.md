@@ -45,18 +45,18 @@ Primarily, it can be divided into 3 parts -
 1. Data Driven Test Automation Framework 
 Test case logic resides in Test Scripts, test data is seperated and kept outside the test scripts. Test data is read from external files (Excel, CSV files) 
 
-| UserName  | Password |
-| ----------|----------|
-| ROBOT1    | robPass1 |
-| ROBOT2    | robPass2 |
+  | UserName  | Password |
+  | ----------|----------|
+  | ROBOT1    | robPass1 |
+  | ROBOT2    | robPass2 |
 
 2. Keyword or Table Driven Test Automation Framework
 Most commonly used testing framework. Keyword is an action that can be performed on a GUI component. Eg. of an action is InputText, ClickButton, ClickCheckBox, ClickRadioButton, SelectValueFromDropdown and so on. 
 
-| ApplicationMap    | ActionKeyword   | Argument   |
-| ------------------|-----------------|------------|
-| textFieldUsername | inputText       | ROBOT1     |
-| submitButton      | clickButton     |            |
+  | ApplicationMap    | ActionKeyword   | Argument   |
+  | ------------------|-----------------|------------|
+  | textFieldUsername | inputText       | ROBOT1     |
+  | submitButton      | clickButton     |            |
 
 3. Hybrid Test Automation Framework 
 It is the combination of one or more frameworks discussed above. 
