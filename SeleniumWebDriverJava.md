@@ -65,6 +65,16 @@ It is the combination of one or more frameworks discussed above.
 Page object model is a model that allows easy and quick maintenance. Application pages are physically seperated into different pages. Eg LoginPage.java, HomePage.java, UserRegistration.java, MenuBar.java. 
 TestCase.java will contain the tests and will interact with the pages to execute tests. 
 
+### What are the third party browser drivers available for Selenium? 
+1. Mozilla GeckoDriver
+2. Google ChromeDriver
+3. HTMLUnitDriver
+4. Appium
+5. SafariDriver
+6. ios-driver
+
+7. InternetExplorerDriveris an exception 32-bit and 64-bit versions by SeleniumHQ. 
+
 ### What are some of the important classes and interfaces of WebDriver? 
 
 ### How do you open a browser (FF/GC/IE) using Selenium WebDriver? 
