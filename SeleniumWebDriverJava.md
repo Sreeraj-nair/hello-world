@@ -62,7 +62,8 @@ Argument       - ROBOT
 It is the combination of one or more frameworks discussed above. 
 
 4. Page Object Model Framework 
-
+Page object model is a model that allows easy and quick maintenance. Application pages are physically seperated into different pages. Eg LoginPage.java, HomePage.java, UserRegistration.java, MenuBar.java. 
+TestCase.java will contain the tests and will interact with the pages to execute tests. 
 
 ### What are some of the important classes and interfaces of WebDriver? 
 
