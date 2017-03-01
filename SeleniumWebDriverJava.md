@@ -1,8 +1,30 @@
 # Selenium WebDriver using Java Reference 
 
 ### What is Selenium WebDriver? 
+Selenium is a set of tools and API that allows us to automate Browsers. 
+
+### Browser platforms are supported by Selenium? 
+Firefox, Internet Explorer, Google Chrome, Opera and Safari. 
+
+### OS platforms supported by Selenium? 
+Microsoft Windows 7, Apple OS X and Linux OS. 
 
 ### What are different language bindings available for Selenium? 
+Programming languages are supported through Selenium "drivers". These are libraries made for each language that expose commands from the Selenium API natively in the form of methods/functions. 
+
+### Lanuage bindings available with Selenium WebDriver? 
+
+
+### Testing Frameworks that can be used with Selenium. 
+1. Java - JUnit, TestNG
+2. C# - NUnit
+3. Ruby - RSpec, Test::Unit
+4. Python - Frameworks available: unittest, pyunit, py.test, robot framework
+5. JavaScript (Node) - WebDriverJS, WebdriverIO, NightwatchJS
+6. PHP - Behat+Mink
+7. Haskel
+8. Objective C
+9. Pearl
 
 ### What are different components of Selenium? 
 
