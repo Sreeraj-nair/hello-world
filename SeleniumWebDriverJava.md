@@ -72,8 +72,7 @@ TestCase.java will contain the tests and will interact with the pages to execute
 4. Appium
 5. SafariDriver
 6. ios-driver
-
-7. InternetExplorerDriveris an exception 32-bit and 64-bit versions by SeleniumHQ. 
+7. InternetExplorerDriver is an exception 32-bit and 64-bit versions by SeleniumHQ. 
 
 ### What are some of the important classes and interfaces of WebDriver? 
 
