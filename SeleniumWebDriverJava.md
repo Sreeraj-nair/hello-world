@@ -42,6 +42,12 @@ Primarily, it can be divided into 3 parts -
 ### What is the difference between Selenium and HP QTP? 
  
 ### What are different automation frameworks that can be created using Selenium WebDriver? 
+1. Data Driven Test Automation Framework 
+
+2. Keyword Driven Test Automation Framework
+
+3. Hybrid Test Automation Framework
+
 
 ### What are some of the important classes and interfaces of WebDriver? 
 
