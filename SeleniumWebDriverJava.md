@@ -75,11 +75,29 @@ TestCase.java will contain the tests and will interact with the pages to execute
 7. InternetExplorerDriver is an exception 32-bit and 64-bit versions by SeleniumHQ. 
 
 ### What type of testing can be done using Selenium?
+1. Testing static content
+2. Testing links
+3. Function Tests 
+4. Testing Dynamic Elements
+5. Ajax Tests
+
+
+
+### How do automate all the links available on a page? 
+
 
 ### What are some of the important classes and interfaces of WebDriver? 
 
 ### How do you open a browser (FF/GC/IE) using Selenium WebDriver? 
+    Launch Firefox and navigate to https://www.google.com 
+         WebDriver driver = new FirefoxDriver(); 
+         driver.get("http://www.google.com");
+         OR
+         driver.navigate().to("http://xyz.com/abc/tag.php");
 
+         WebDriver driver = new ChromeDriver(); 
+         driver.get("https://www.google.com"); 
+         
 ### What are error collectors in Selenium? 
 
 ### How do you capture screenshots in Selenium? 
