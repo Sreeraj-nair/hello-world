@@ -89,7 +89,10 @@ TestCase.java will contain the tests and will interact with the pages to execute
 ### What are some of the important classes and interfaces of WebDriver? 
 
 ### How do you open a browser (FF/GC/IE) using Selenium WebDriver? 
-    Launch Firefox and navigate to https://www.google.com 
+Launch Firefox and navigate to https://www.google.com 
+        
+         System.setProperty("webdriver.gecko.driver", "\\lib\\drivers\\geckodriver.exe"); 
+         
          WebDriver driver = new FirefoxDriver(); 
          driver.get("http://www.google.com");
          OR
