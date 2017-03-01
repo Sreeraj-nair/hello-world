@@ -89,7 +89,7 @@ TestCase.java will contain the tests and will interact with the pages to execute
 
 ### How do you open a browser (FF/GC/IE) using Selenium WebDriver? 
 
-### What are error collectors in Selenoium? 
+### What are error collectors in Selenium? 
 
 ### How do you capture screenshots in Selenium? 
 
