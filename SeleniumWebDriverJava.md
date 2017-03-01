@@ -33,7 +33,7 @@ Programming languages are supported through Selenium "drivers". These are librar
 ### What are different components of Selenium? 
 Primarily, it can be divided into 3 parts - 
 1. Selenium IDE - Firefox browser plugin for recording and playback. Also can convert the recorded scripts to Java, C# and so on. 
-2. Selenium Standalone Server - For running Selenium scripts on remote or distributed machines. This would be required to run tests in the Grid configuration. 
+2. Selenium Standalone Server - For running Selenium scripts on remote or distributed machines. This would be required to run tests in      the Grid configuration. 
 3. Selenium WebDriver API. 
 
 ### What is the difference between Selenium and HP QTP? 
