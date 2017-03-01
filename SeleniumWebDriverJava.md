@@ -4,6 +4,8 @@
 
 ## What are different language bindings available for Selenium? 
 
+## What are different components of Selenium? 
+
 ## What is the difference between Selenium and HP QTP? 
 
 ## What are different automation frameworks that can be created using Selenium WebDriver? 
@@ -35,4 +37,41 @@
 ## What is a WSDL? 
 
 ## Why do we need a web service? 
+
+## What is JUnit and TestNG? 
+
+## What is a page object model, explain with an example? 
+
+## What are different element locators available in Selenium WebDriver? 
+
+## What are different types of waits available in Selenium? 
+
+## Which wait should be used for automation an app? 
+
+## What's the difference between Verify and Assert in TestNG framework? 
+
+## Explain the architecture of Selenium WebDriver? 
+
+## What is Selenium Grid? 
+
+## What is Robot API? 
+
+## What is AutoIT API? 
+
+## What is an Interface in Java? 
+
+## What is an Abstract class in Java? 
+
+## What is a concrete class or class in Java? 
+
+## What is an object in Java? 
+
+## What are various OOPS features available in Java? 
+
+## How can you handle multiple windows in Selenium WebDriver? 
+
+## Explain Exception handling in Java?
+
+
+
 
