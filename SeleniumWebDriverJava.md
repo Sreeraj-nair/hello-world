@@ -53,9 +53,10 @@ Test case logic resides in Test Scripts, test data is seperated and kept outside
 2. Keyword or Table Driven Test Automation Framework
 Most commonly used testing framework. Keyword is an action that can be performed on a GUI component. Eg. of an action is InputText, ClickButton, ClickCheckBox, ClickRadioButton, SelectValueFromDropdown and so on. 
 
-ApplicationMap - textFieldUsername
-ActionKeyword  - Set
-Argument       - ROBOT
+| ApplicationMap    | ActionKeyword   | Argument   |
+| ------------------|-----------------|------------|
+| textFieldUsername | inputText       | ROBOT1     |
+| submitButton      | clickButton     |            |
 
 3. Hybrid Test Automation Framework 
 It is the combination of one or more frameworks discussed above. 
