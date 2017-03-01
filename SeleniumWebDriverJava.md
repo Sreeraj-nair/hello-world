@@ -77,13 +77,13 @@ TestCase.java will contain the tests and will interact with the pages to execute
 ### What type of testing can be done using Selenium? 
 ### 1. Content Testing - This is the simplest type of test, a content test, is a simple test for the existance of a static, non-changing     UI element. For instance
 
-        * Does each page have its expected page title? This can be used to verify your test found an expected page after following a             link.
+        Does each page have its expected page title? This can be used to verify your test found an expected page after following a               link.
         
-        * Does the application’s home page contain an image expected to be at the top of the page?
+        Does the application’s home page contain an image expected to be at the top of the page?
         
-        * Does each page of the website contain a footer area with links to the company contact page, privacy policy, and trademarks               information?
+        Does each page of the website contain a footer area with links to the company contact page, privacy policy, and trademarks               information?
         
-        * Does each page begin with heading text using the \<h1> tag? And, does each page have the correct text within that header?
+        Does each page begin with heading text using the \<h1> tag? And, does each page have the correct text within that header?
 
 ### 2. Testing links
         To find broken links. Testing involves clicking each link and verifying the expected page. If static links are not changed               frequently   then manual testing may be sufficient. However, if web designers frequently alter links, or if files are                   occationally relocated, link tests should be automated. 
