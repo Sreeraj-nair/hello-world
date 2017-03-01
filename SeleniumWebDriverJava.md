@@ -13,14 +13,18 @@ Microsoft Windows 7, Apple OS X and Linux OS.
 Programming languages are supported through Selenium "drivers". These are libraries made for each language that expose commands from the Selenium API natively in the form of methods/functions. 
 
 ### Lanuage bindings available with Selenium WebDriver? 
-
+1. Java
+2. C#
+3. Ruby
+4. Python
+5. Javascript (Node)
 
 ### Testing Frameworks that can be used with Selenium. 
 1. Java - JUnit, TestNG
 2. C# - NUnit
 3. Ruby - RSpec, Test::Unit
 4. Python - Frameworks available: unittest, pyunit, py.test, robot framework
-5. JavaScript (Node) - WebDriverJS, WebdriverIO, NightwatchJS
+5. Javascript (Node) - WebDriverJS, WebdriverIO, NightwatchJS
 6. PHP - Behat+Mink
 7. Haskel
 8. Objective C
