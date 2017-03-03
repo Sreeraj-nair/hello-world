@@ -226,7 +226,7 @@ We can use dragAndDrop method provided by Action class of Selenium WebDriver.
 ### What are different types of waits available in Selenium? 
 Waiting is having the automated task execution elapse a certain amout of time before continuing with the next step. You should choose to use Explicit or Implicit waits. 
 
-# Waring: Should not mix both implicit and explicit waits. Doing so can cause unpredictable wait times. 
+	Waring: Should not mix both implicit and explicit waits. Doing so can cause unpredictable wait times. 
 
 ## 1. Explicit Waits 
 An explicit wait will allow the automation task execution to wait for a certain condition to occur before proceeding further in the code. Worst case of this is Thread.sleep(), which sets the condition to an exact time period to wait. 
@@ -253,7 +253,7 @@ An implicit wait will tell WebDriver to poll the DOM for a certain amount of tim
 	WebDriver driver = new FirefoxDriver();
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	driver.get("https://url.com");
-	WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));
+	WebElement myDynamicElement = driver.findElement(By.id("someDynamicElement"));
 
 ### Which wait should be used for automation an app? 
 
