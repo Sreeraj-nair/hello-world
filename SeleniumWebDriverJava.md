@@ -191,8 +191,38 @@ We can use dragAndDrop method provided by Action class of Selenium WebDriver.
 	Alternatively, the same code can can also be written as 
 	
 	(new Actions(driver)).dragAndDrop(source, targe).perform(); 
+
+### How to set proxy for FF and IE? 
+The easiest and recommended way is to manually set the proxy on the machine that will be running the test. 
+
+However, you can do so programmatically for IE and FF like this. 
+
+	Internet Explorer 
 	
-	
+	String PROXY = "localhost";
+	int PORT = 8080;
+
+	com.google.gson.JsonObject json = new com.google.gson.JsonObject();
+	json.addProperty("proxyType", "MANUAL");
+	json.addProperty("httpProxy", PROXY);
+	json.addProperty("httpProxyPort", PORT);
+	json.addProperty("sslProxy", PROXY);
+	json.addProperty("sslProxyPort", PORT);
+
+	DesiredCapabilities cap = new DesiredCapabilities();
+	cap.setCapability("proxy", json);
+
+	GeckoDriverService service =new GeckoDriverService.Builder(firefoxBinary)
+	  .usingDriverExecutable(new File("path to geckodriver"))
+	  .usingAnyFreePort()
+	  .usingAnyFreePort()
+	  .build();
+	service.start();
+
+	// GeckoDriver currently needs the Proxy set in RequiredCapabilities
+	driver = new FirefoxDriver(service, cap, cap);	
+
+		
 ### What are error collectors in Selenium? 
 
 ### How do you capture screenshots in Selenium? 
