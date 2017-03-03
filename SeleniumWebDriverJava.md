@@ -38,8 +38,6 @@ Primarily, it can be divided into 3 parts -
 2. Selenium Standalone Server - For running Selenium scripts on remote or distributed machines. This would be required to run tests in      the Grid configuration.
 
 3. Selenium WebDriver API. 
-
-### What is the difference between Selenium and HP QTP? 
  
 ### What are different automation frameworks that can be created using Selenium WebDriver? 
 1. Data Driven Test Automation Framework 
@@ -179,9 +177,22 @@ For performing the file upload, we have two options.
         
        }
       
+### How to perform drag and drop in selenium? 
+We can use dragAndDrop method provided by Action class of Selenium WebDriver. 
+
+	Syntax
+	
+	WebDriver driver = new FirefoxDriver(); 
+	
+	Action action = new Actions(driver);
    
-   
-         
+   	action.dragAndDrop(sourceLocator, destinationLocatior);
+
+	Alternatively, the same code can can also be written as 
+	
+	(new Actions(driver)).dragAndDrop(source, targe).perform(); 
+	
+	
 ### What are error collectors in Selenium? 
 
 ### How do you capture screenshots in Selenium? 
