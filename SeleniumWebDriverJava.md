@@ -81,12 +81,33 @@ TestCase.java will contain the tests and will interact with the pages to execute
 4. Testing Dynamic Elements
 5. Ajax Tests
 
+### How do automate all the links available on a page? 
+
+
+### What are some of the important classes and interfaces of WebDriver? 
+
+### How do you open a browser (FF/GC/IE) using Selenium WebDriver? 
+Launch Firefox and navigate to https://www.google.com 
+        
+         System.setProperty("webdriver.gecko.driver", "\\lib\\drivers\\geckodriver.exe"); 
+         
+         WebDriver driver = new FirefoxDriver(); 
+         driver.get("http://www.google.com");
+         OR
+         driver.navigate().to("http://xyz.com/abc/tag.php");
+
+         WebDriver driver = new ChromeDriver(); 
+         driver.get("https://www.google.com"); 
+        
 ### How to perform file upload and browse using Selenium? 
 Since Selenium won't have any inbuilt APIs to interact with Windows or the underlying OS file system, we need to make use of an external API or plugin to do this. 
 For performing the file upload, we have two options. 
-1. The first way of doing it by finding the element and typing the absolute path of the document into it. 
+1. The first way of doing it by finding the element and typing the absolute path of the document into it.
+
 # This method works only when the text field is visible and enabled
+       
        Syntax
+       
        WebElement textFieldFilePath = driver.findElement(By.name("fileUpload")); 
        
        element.sendKeys("C:\Users\Documents\filename.doc");
@@ -96,8 +117,11 @@ For performing the file upload, we have two options.
    general scripting. 
    We need to call the AutoIT script after clicking on the upload or browse button. Immediately after clicking the Upload button, the 
    the control should be transferred to AutoIT which takes care of uploading the file. 
+   
 # This method can be used for Windows PC.        
+       
        Syntax
+       
        Runtime.getRuntime().exec("AutoIT.exe file path");
        
        Runtime.getRuntime().exec("D:/fileupload.exe");
@@ -119,27 +143,44 @@ For performing the file upload, we have two options.
    Step 3: After that we need to click the Open which will upload the file. 
    
         Send("{ENTER}")
-
-
-
-
-### How do automate all the links available on a page? 
-
-
-### What are some of the important classes and interfaces of WebDriver? 
-
-### How do you open a browser (FF/GC/IE) using Selenium WebDriver? 
-Launch Firefox and navigate to https://www.google.com 
         
-         System.setProperty("webdriver.gecko.driver", "\\lib\\drivers\\geckodriver.exe"); 
-         
-         WebDriver driver = new FirefoxDriver(); 
-         driver.get("http://www.google.com");
-         OR
-         driver.navigate().to("http://xyz.com/abc/tag.php");
-
-         WebDriver driver = new ChromeDriver(); 
-         driver.get("https://www.google.com"); 
+3. There is a third method which uses Robot API to interact with the browse control using Keypad controls. 
+   
+       Syntax
+       
+        public static void setClipboardData(String string) {
+		          
+            //StringSelection is a class that can be used for copy and paste operations.
+		          StringSelection stringSelection = new StringSelection(string);
+		          
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+		     }
+       
+       public static void uploadFile(String fileLocation){
+           
+           setClipBoardData(fileLocation); 
+           
+           Robot robot = new Robot(); 
+           
+           //Press control key
+           robot.keyPress(KeyEvent.VK_CONTROL);
+           
+           //Press V
+           robot.keyPress(KeyEvent.VK_V); 
+           
+           //Press control key again
+           robot.keyPress(KeyEvent.VK_CONTROL); 
+           
+           //Press Enter key 
+           robot.keyPress(KeyEvent.VK_ENTER); 
+           
+           //Release enter key 
+           robot.keyRelease(keyEvent.VK_ENTER); 
+        
+       }
+      
+   
+   
          
 ### What are error collectors in Selenium? 
 
