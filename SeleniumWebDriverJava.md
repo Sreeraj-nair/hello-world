@@ -244,12 +244,26 @@ However, you can do so programmatically for IE and FF like this.
 ### What is an XML? 
 
 ### What is JSON? 
+JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. It is a subset of JavaScript Programming Language. 
+JSON is a text format that is completely language independent. These properties make JSON an ideal data-interchange language.
+
+JSON is built on two structures: 
+1. A collection of name value pairs. In various languages it is referred to as an object, record, struct, dictionary, hash table, keyed list, or associative array. 
+
+2. An ordered list of values. Also realized as array, vector, list or sequence. 
+These are universal data structures. Virtually all modern programming languages support them in one form or another. It makes sense that a data format that is interchangeable with programming languages also be based on these structures.
+
+	object {string:value} 
+	Where in each name is seperated by a colon : and every string value pair seperated by a coma ,
+	
+	array {value}
+	Where each value is seperated by coma , 
 
 ### What are Restful or REST services? 
 
 ### What are SOAP services? 
 
-## What is a WSDL? 
+### What is a WSDL? 
 
 ### Why do we need a web service? 
 
