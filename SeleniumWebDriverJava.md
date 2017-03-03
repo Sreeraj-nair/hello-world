@@ -222,6 +222,12 @@ However, you can do so programmatically for IE and FF like this.
 	// GeckoDriver currently needs the Proxy set in RequiredCapabilities
 	driver = new FirefoxDriver(service, cap, cap);	
 
+### How can you use FirefoxProfile. 
+	FirefoxProfile fp = new FirefoxProfile();
+	// set something on the profile...
+	DesiredCapabilities dc = DesiredCapabilities.firefox();
+	dc.setCapability(FirefoxDriver.PROFILE, fp);
+	WebDriver driver = new RemoteWebDriver(dc);
 		
 ### What are error collectors in Selenium? 
 
