@@ -81,6 +81,46 @@ TestCase.java will contain the tests and will interact with the pages to execute
 4. Testing Dynamic Elements
 5. Ajax Tests
 
+### How to perform file upload and browse using Selenium? 
+Since Selenium won't have any inbuilt APIs to interact with Windows or the underlying OS file system, we need to make use of an external API or plugin to do this. 
+For performing the file upload, we have two options. 
+1. The first way of doing it by finding the element and typing the absolute path of the document into it. 
+# This method works only when the text field is visible and enabled
+       Syntax
+       WebElement textFieldFilePath = driver.findElement(By.name("fileUpload")); 
+       
+       element.sendKeys("C:\Users\Documents\filename.doc");
+       
+2. When there is no text box or input tag to send the file path using SendKeys method. That is when you have a customized browse button    and on click a Window popup appears and file to be uploaded needs to be selected using Windows controls. And we are aware that          Selenium will not support OS controls. 
+   In this case we can using AutoIT (v3), which is a freeware which uses BASIC like scripting language for automating the Window GUI and
+   general scripting. 
+   We need to call the AutoIT script after clicking on the upload or browse button. Immediately after clicking the Upload button, the 
+   the control should be transferred to AutoIT which takes care of uploading the file. 
+# This method can be used for Windows PC.        
+       Syntax
+       Runtime.getRuntime().exec("AutoIT.exe file path");
+       
+       Runtime.getRuntime().exec("D:/fileupload.exe");
+   
+   AutoIT script should have the following - 
+
+   Step 1: After clicking on the browse button, the cursor will mode to the window popup. 
+   Depending on the browser, the windows pop up may have following names - 
+   Mozilla FF - File Upload
+   Chrome - Open
+   IE 11 - Choose File to Upload
+   
+       WinWaitActive("File Upload")
+
+   Step 2: When the window pop up is active, file path needs to be passed. 
+   
+        Send("Full path of the document to be uploaded")
+        
+   Step 3: After that we need to click the Open which will upload the file. 
+   
+        Send("{ENTER}")
+
+
 
 
 ### How do automate all the links available on a page? 
