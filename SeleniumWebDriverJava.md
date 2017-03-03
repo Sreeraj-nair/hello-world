@@ -156,7 +156,7 @@ For performing the file upload, we have two options.
             Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 		     }
        
-       public static void uploadFile(String fileLocation){
+       	public static void uploadFile(String fileLocation){
            
            setClipBoardData(fileLocation); 
            
