@@ -233,7 +233,7 @@ However, you can do so programmatically for IE and FF like this.
 Exception thrown: "org.openqa.selenium.WebDriverException: Element is not clickable at point (411, 675). Other element would receive the click: ..."
 
 There are 3 reasons for this exception to occur - 
-	### 1. The element is not visible to click. 
+	1. The element is not visible to click. 
 	You can use Actions or JavascriptExecutor for making it to click. 
 	
 	By Actions: 
@@ -260,10 +260,10 @@ There are 3 reasons for this exception to occur -
 	
 	Then click on the element. 
 	
-	### 2. The page is getting refreshed before it is clicking the element. 
+	2. The page is getting refreshed before it is clicking the element. 
 	In this case make the page to wait for few seconds. 
 	
-	### 3. The element is clickable but there is a spinner or overlay on top of it. 
+	3. The element is clickable but there is a spinner or overlay on top of it. 
 	In this case, code will wait until the spinner or overlay disappears. 
 	
 		By overlayImage = By.id("loadingOverlaySpanID");
