@@ -427,6 +427,27 @@ An implicit wait will tell WebDriver to poll the DOM for a certain amount of tim
 ### Explain the architecture of Selenium WebDriver? 
 
 ### What is Selenium Grid? 
+Selenium Grid allows us to run automation tests on different machines against different browses in parallel. Selenium Grid supports disctributed test execution. 
+
+When to use Selenium Grid 
+	- To run tests against multiple browsers, multiple versions of browsers, and browsers running on different operating systems. 
+	- To reduce the time it takes for the test suite to complete a test pass. 
+	
+How selenium grid works with a Hub and nodes? 
+A grid consists of a single hub and one or more nodes. 
+
+How to start hub and node? 
+	
+	Starting Hub
+	
+	java -jar selenium-server-standalone-2.44.0.jar -role hub
+	
+	Starting Node
+	
+	java -jar selenium-server-standalone-2.44.0.jar -role node  -hub http://localhost:4444/grid/register
+
+
+
 
 ### What is Robot API? 
 
@@ -451,10 +472,11 @@ When an error occurs within a method, the method creates an object and hands it 
 
 In java there are two exception types - Checked and Un-checked Exceptions. 
 
-1. Checked exceptions are the ones checked at compile time. 
+	1. Checked exceptions are the ones checked at compile time. 
+	Eg of checked exceptions. 
 
-2. Unchecked exceptions are the ones that are not checked at compile time.  
-
+	2. Unchecked exceptions are the ones that are not checked at compile time.  
+	Eg of unchecked exceptions. 
 
 
 
