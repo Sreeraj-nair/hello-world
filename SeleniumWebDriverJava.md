@@ -228,7 +228,50 @@ However, you can do so programmatically for IE and FF like this.
 	DesiredCapabilities dc = DesiredCapabilities.firefox();
 	dc.setCapability(FirefoxDriver.PROFILE, fp);
 	WebDriver driver = new RemoteWebDriver(dc);
+	
+### Element is not clickable error while executing Selenium scripts? 
+Exception thrown: "org.openqa.selenium.WebDriverException: Element is not clickable at point (411, 675). Other element would receive the click: ..."
+
+There are 3 reasons for this exception to occur - 
+	### 1. The element is not visible to click. 
+	You can use Actions or JavascriptExecutor for making it to click. 
+	
+	By Actions: 
+	
+		WebElement element = driver.findElement(By("element_path")); 
 		
+		Actions actions = new Actions(driver);
+		
+		actions.moveToElement(element).click().perform();
+	
+	By JavascriptExecutor 
+	
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+
+		jse.executeScript("scroll(250, 0)"); // if the element is on top.
+
+		jse.executeScript("scroll(0, 250)"); // if the element is on bottom.
+	
+	OR
+	
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+
+		jse.executeScript("arguments[0].scrollIntoView()", Webelement); 
+	
+	Then click on the element. 
+	
+	### 2. The page is getting refreshed before it is clicking the element. 
+	In this case make the page to wait for few seconds. 
+	
+	### 3. The element is clickable but there is a spinner or overlay on top of it. 
+	In this case, code will wait until the spinner or overlay disappears. 
+	
+		By overlayImage = By.id("loadingOverlaySpanID");
+		
+		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingImage));
+			
 ### What are error collectors in Selenium? 
 
 ### How do you capture screenshots in Selenium? 
