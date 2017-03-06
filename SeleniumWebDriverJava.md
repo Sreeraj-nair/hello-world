@@ -445,6 +445,15 @@ An implicit wait will tell WebDriver to poll the DOM for a certain amount of tim
 ### How can you handle multiple windows in Selenium WebDriver? 
 
 ### Explain Exception handling in Java?
+An exception is an event that occurs during the execution of a program,that disrupts the normal flow of instructions. 
+
+When an error occurs within a method, the method creates an object and hands it off to the runtime system. The object, called an exception object, contains information 
+
+In java there are two exception types - Checked and Un-checked Exceptions. 
+
+1. Checked exceptions are the ones checked at compile time. 
+
+2. Unchecked exceptions are the ones that are not checked at compile time.  
 
 
 
