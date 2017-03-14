@@ -16,6 +16,61 @@ You cannot specify LOB columns in the WHERE clause if the WHERE clause contains 
 # Equijoins 
 An equijoin is a join with a join condition containing an equality operator. An equijoin combines rows that have equivalent values for the specified columns. Depending on the internal algorithm the optimizer chooses to execute the join, the total size of the columns in the equijoin condition in a single table may be limited to the size of a data block minus some overhead. The size of a data block is specified by the initialization parameter DB_BLOCK_SIZE.
 
+Using Join Queries: Examples 
+The following examples show various ways of joining tables in a query. In the first example, an equijoin returns the name and job of each employee and the number and name of the department in which the employee works:
+
+SELECT last_name, job_id, departments.department_id, department_name
+   FROM employees, departments
+   WHERE employees.department_id = departments.department_id
+   ORDER BY last_name, job_id;
+
+LAST_NAME           JOB_ID     DEPARTMENT_ID DEPARTMENT_NAME
+------------------- ---------- ------------- ----------------------
+. . .
+Sciarra             FI_ACCOUNT           100 Finance
+Urman               FI_ACCOUNT           100 Finance
+Popp                FI_ACCOUNT           100 Finance
+. . .
+You must use a join to return this data because employee names and jobs are stored in a different table than department names. Oracle Database combines rows of the two tables according to this join condition:
+
+employees.department_id = departments.department_id 
+The following equijoin returns the name, job, department number, and department name of all sales managers:
+
+SELECT last_name, job_id, departments.department_id, department_name
+   FROM employees, departments
+   WHERE employees.department_id = departments.department_id
+   AND job_id = 'SA_MAN'
+   ORDER BY last_name;
+
+LAST_NAME           JOB_ID     DEPARTMENT_ID DEPARTMENT_NAME
+------------------- ---------- ------------- -----------------------
+Russell             SA_MAN                80 Sales
+Partners            SA_MAN                80 Sales
+Errazuriz           SA_MAN                80 Sales
+Cambrault           SA_MAN                80 Sales
+Zlotkey             SA_MAN                80 Sales
+This query is identical to the preceding example, except that it uses an additional where_clause condition to return only rows with a job value of 'SA_MAN'.
+
+Using Subqueries: Examples 
+To determine who works in the same department as employee 'Lorentz', issue the following statement:
+
+SELECT last_name, department_id FROM employees
+   WHERE department_id =
+     (SELECT department_id FROM employees
+      WHERE last_name = 'Lorentz')
+   ORDER BY last_name, department_id; 
+To give all employees in the employees table a 10% raise if they have changed jobs—if they appear in the job_history table—issue the following statement:
+
+UPDATE employees 
+    SET salary = salary * 1.1
+    WHERE employee_id IN (SELECT employee_id FROM job_history);
+To create a second version of the departments table new_departments, with only three of the columns of the original table, issue the following statement:
+
+CREATE TABLE new_departments 
+   (department_id, department_name, location_id)
+   AS SELECT department_id, department_name, location_id 
+   FROM departments; 
+
 ## Example 
     
     SQL> select * from t1;
