@@ -48,8 +48,7 @@ SQL> select t1.id, t2.id
          2
 
 -- RIGHT OUTER JOIN
-SQL> select t1.id, t2.id
-  2  from t1 RIGHT OUTER JOIN t2 ON (t1.id = t2.id);
+SQL> select t1.id, t2.id from t1 RIGHT OUTER JOIN t2 ON (t1.id = t2.id);
 
         ID         ID
 ---------- ----------
@@ -59,11 +58,7 @@ SQL> select t1.id, t2.id
                     5
 
 -- LEFT JOIN (SAME AS LEFT OUTER JOIN)
-SQL> ed
-Wrote file afiedt.buf
-
-  1  select t1.id, t2.id   2* from t1 LEFT JOIN t2 ON (t1.id = t2.id)
-SQL> /
+SQL> select t1.id, t2.id from t1 LEFT JOIN t2 ON (t1.id = t2.id)
 
         ID         ID
 ---------- ----------
@@ -73,11 +68,7 @@ SQL> /
          2
 
 -- RIGHT JOIN (SAME AS RIGHT OUTER JOIN)
-SQL> ed
-Wrote file afiedt.buf
-
-  select t1.id, t2.id from t1 RIGHT JOIN t2 ON (t1.id = t2.id)
-SQL> 
+SQL> select t1.id, t2.id from t1 RIGHT JOIN t2 ON (t1.id = t2.id)
 
         ID         ID
 ---------- ----------
@@ -87,10 +78,7 @@ SQL>
                     5
 
 -- INNER JOIN (REGULAR JOIN)
-SQL> Wrote file afiedt.buf
-
-  select t1.id, t2.id   2* from t1 INNER JOIN t2 ON (t1.id = t2.id)
-SQL> 
+SQL> select t1.id, t2.id from t1 INNER JOIN t2 ON (t1.id = t2.id)
 
         ID         ID
 ---------- ----------
@@ -98,11 +86,7 @@ SQL>
          4          4
 
 -- FULL OUTER JOIN
-SQL> 
-Wrote file afiedt.buf
-
-      select t1.id, t2.id from t1 FULL OUTER JOIN t2 ON (t1.id = t2.id)
-SQL> 
+SQL> select t1.id, t2.id from t1 FULL OUTER JOIN t2 ON (t1.id = t2.id)
 
         ID         ID
 ---------- ----------
