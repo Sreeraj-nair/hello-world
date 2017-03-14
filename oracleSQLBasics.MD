@@ -16,4 +16,110 @@ You cannot specify LOB columns in the WHERE clause if the WHERE clause contains 
 # Equijoins 
 An equijoin is a join with a join condition containing an equality operator. An equijoin combines rows that have equivalent values for the specified columns. Depending on the internal algorithm the optimizer chooses to execute the join, the total size of the columns in the equijoin condition in a single table may be limited to the size of a data block minus some overhead. The size of a data block is specified by the initialization parameter DB_BLOCK_SIZE.
 
- 
+## Example 
+    
+    SQL> select * from t1;
+
+        ID
+----------
+         1
+         2
+         3
+         4
+
+SQL> select * from t2;
+
+        ID
+----------
+         3
+         4
+         5
+         6
+
+-- LEFT OUTER JOIN
+SQL> select t1.id, t2.id
+  2  from t1 LEFT OUTER JOIN t2 ON (t1.id = t2.id);
+
+        ID         ID
+---------- ----------
+         3          3
+         4          4
+         1
+         2
+
+-- RIGHT OUTER JOIN
+SQL> select t1.id, t2.id
+  2  from t1 RIGHT OUTER JOIN t2 ON (t1.id = t2.id);
+
+        ID         ID
+---------- ----------
+         3          3
+         4          4
+                    6
+                    5
+
+-- LEFT JOIN (SAME AS LEFT OUTER JOIN)
+SQL> ed
+Wrote file afiedt.buf
+
+  1  select t1.id, t2.id
+  2* from t1 LEFT JOIN t2 ON (t1.id = t2.id)
+SQL> /
+
+        ID         ID
+---------- ----------
+         3          3
+         4          4
+         1
+         2
+
+-- RIGHT JOIN (SAME AS RIGHT OUTER JOIN)
+SQL> ed
+Wrote file afiedt.buf
+
+  1  select t1.id, t2.id
+  2* from t1 RIGHT JOIN t2 ON (t1.id = t2.id)
+SQL> /
+
+        ID         ID
+---------- ----------
+         3          3
+         4          4
+                    6
+                    5
+
+-- INNER JOIN (REGULAR JOIN)
+SQL> ed
+Wrote file afiedt.buf
+
+  1  select t1.id, t2.id
+  2* from t1 INNER JOIN t2 ON (t1.id = t2.id)
+SQL> /
+
+        ID         ID
+---------- ----------
+         3          3
+         4          4
+
+-- FULL OUTER JOIN
+SQL> ed
+Wrote file afiedt.buf
+
+  1  select t1.id, t2.id
+  2* from t1 FULL OUTER JOIN t2 ON (t1.id = t2.id)
+SQL> /
+
+        ID         ID
+---------- ----------
+         3          3
+         4          4
+         1
+         2
+                    6
+                    5
+
+6 rows selected.
+
+SQL>
+               
+     
