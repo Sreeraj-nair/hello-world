@@ -27,7 +27,7 @@ An equijoin is a join with a join condition containing an equality operator. An 
          3
          4
 
-SQL> select * from t2;
+    SQL> select * from t2;
 
         ID
 ----------
@@ -36,8 +36,8 @@ SQL> select * from t2;
          5
          6
 
--- LEFT OUTER JOIN
-SQL> select t1.id, t2.id from t1 LEFT OUTER JOIN t2 ON (t1.id = t2.id);
+    -- LEFT OUTER JOIN
+    SQL> select t1.id, t2.id from t1 LEFT OUTER JOIN t2 ON (t1.id = t2.id);
 
         ID         ID
 ---------- ----------
@@ -46,8 +46,8 @@ SQL> select t1.id, t2.id from t1 LEFT OUTER JOIN t2 ON (t1.id = t2.id);
          1
          2
 
--- RIGHT OUTER JOIN
-SQL> select t1.id, t2.id from t1 RIGHT OUTER JOIN t2 ON (t1.id = t2.id);
+    -- RIGHT OUTER JOIN
+    SQL> select t1.id, t2.id from t1 RIGHT OUTER JOIN t2 ON (t1.id = t2.id);
 
         ID         ID
 ---------- ----------
@@ -56,8 +56,8 @@ SQL> select t1.id, t2.id from t1 RIGHT OUTER JOIN t2 ON (t1.id = t2.id);
                     6
                     5
 
--- LEFT JOIN (SAME AS LEFT OUTER JOIN)
-SQL> select t1.id, t2.id from t1 LEFT JOIN t2 ON (t1.id = t2.id)
+    -- LEFT JOIN (SAME AS LEFT OUTER JOIN)
+    SQL> select t1.id, t2.id from t1 LEFT JOIN t2 ON (t1.id = t2.id)
 
         ID         ID
 ---------- ----------
@@ -66,8 +66,8 @@ SQL> select t1.id, t2.id from t1 LEFT JOIN t2 ON (t1.id = t2.id)
          1
          2
 
--- RIGHT JOIN (SAME AS RIGHT OUTER JOIN)
-SQL> select t1.id, t2.id from t1 RIGHT JOIN t2 ON (t1.id = t2.id)
+    -- RIGHT JOIN (SAME AS RIGHT OUTER JOIN)
+    SQL> select t1.id, t2.id from t1 RIGHT JOIN t2 ON (t1.id = t2.id)
 
         ID         ID
 ---------- ----------
@@ -76,16 +76,16 @@ SQL> select t1.id, t2.id from t1 RIGHT JOIN t2 ON (t1.id = t2.id)
                     6
                     5
 
--- INNER JOIN (REGULAR JOIN)
-SQL> select t1.id, t2.id from t1 INNER JOIN t2 ON (t1.id = t2.id)
+    -- INNER JOIN (REGULAR JOIN)
+    SQL> select t1.id, t2.id from t1 INNER JOIN t2 ON (t1.id = t2.id)
 
         ID         ID
 ---------- ----------
          3          3
          4          4
 
--- FULL OUTER JOIN
-SQL> select t1.id, t2.id from t1 FULL OUTER JOIN t2 ON (t1.id = t2.id)
+    -- FULL OUTER JOIN
+    SQL> select t1.id, t2.id from t1 FULL OUTER JOIN t2 ON (t1.id = t2.id)
 
         ID         ID
 ---------- ----------
@@ -96,8 +96,8 @@ SQL> select t1.id, t2.id from t1 FULL OUTER JOIN t2 ON (t1.id = t2.id)
                     6
                     5
 
-6 rows selected.
+    6 rows selected.
 
-SQL>
+    SQL>
                
      
