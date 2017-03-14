@@ -37,8 +37,7 @@ SQL> select * from t2;
          6
 
 -- LEFT OUTER JOIN
-SQL> select t1.id, t2.id
-  2  from t1 LEFT OUTER JOIN t2 ON (t1.id = t2.id);
+SQL> select t1.id, t2.id from t1 LEFT OUTER JOIN t2 ON (t1.id = t2.id);
 
         ID         ID
 ---------- ----------
